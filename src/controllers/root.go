@@ -28,6 +28,9 @@ var rooteTemplate = template.Must(template.New("root").Parse(`
 	  <li>
 	  	<a href="./appengine">appengine</a>
 	  </li>
+	  <li>
+	  	<a href="./log">log</a>
+	  </li>
 	</ul>
   </body>
 </html>

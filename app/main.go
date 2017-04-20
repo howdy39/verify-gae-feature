@@ -8,4 +8,6 @@ import (
 func init() {
 	http.HandleFunc("/", controllers.Root)
 	http.HandleFunc("/appengine", controllers.AppenginePackage)
+	http.HandleFunc("/log", controllers.Log)
+
 }
