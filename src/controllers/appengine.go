@@ -16,6 +16,7 @@ func AppenginePackage(w http.ResponseWriter, r *http.Request) {
 	log.Debugf(c, "Datacenter: %v", appengine.Datacenter(c))
 	log.Debugf(c, "DefaultVersionHostname: %v", appengine.DefaultVersionHostname(c))
 	log.Debugf(c, "IsDevAppServer: %v", appengine.IsDevAppServer())
+	log.Debugf(c, "VersionID: %v", appengine.VersionID(c))
 
 	if err := appenginePackageTemplate.Execute(w, nil); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
