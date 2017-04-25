@@ -2,12 +2,13 @@ package backend
 
 import (
 	"net/http"
-	"verify-gae-feature/src/controllers"
+	appengineController "verify-gae-feature/src/controllers/appengine"
+	logController "verify-gae-feature/src/controllers/log"
+	rootController "verify-gae-feature/src/controllers/root"
 )
 
 func init() {
-	http.HandleFunc("/", controllers.Root)
-	http.HandleFunc("/appengine", controllers.AppenginePackage)
-	http.HandleFunc("/log", controllers.Log)
-
+	http.HandleFunc("/", rootController.Root)
+	http.HandleFunc("/appengine/", appengineController.AppenginePackage)
+	http.HandleFunc("/log/", logController.Log)
 }
